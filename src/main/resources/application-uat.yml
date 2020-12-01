@@ -1,15 +1,16 @@
 spring:
 
   datasource:
-    url: ${url}
-    username: ${username}
-    password: ${password}
+    url: @mysql.url.uat@
+    username: @mysql.username.uat@
+    password: @mysql.password.uat@
 
   # redis 配置
   redis:
     database: 2
-    host: 127.0.0.1
-    port: 6379
+    host: @redis.host.uat@
+    port: @redis.port.uat@
+    password: @redis.password.uat@
     timeout: 10s
     lettuce:
       pool:
