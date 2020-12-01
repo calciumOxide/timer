@@ -1,0 +1,20 @@
+spring:
+
+  datasource:
+    url: ${url}
+    username: ${username}
+    password: ${password}
+
+    redis:
+      database: 2
+      sentinel:
+        master: master6006
+        nodes: 172.22.80.14:6007,172.22.80.46:6007,172.22.80.78:6007
+        password: '65axAnaJy'
+      timeout: 10s
+      lettuce:
+        pool:
+          min-idle: 0
+          max-idle: 8
+          max-active: 8
+          max-wait: -1ms
